@@ -23,13 +23,5 @@ public class Quadrado{
     
     public float VPerimetro(float valorLado){
         return valorLado*4;
-    }
-
-    public void setPerimetro(float perimetro) {
-        this.perimetro = perimetro;
-    }    
-    
-
-  
-   
+    }  
 }
