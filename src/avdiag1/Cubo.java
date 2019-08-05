@@ -9,15 +9,16 @@ import static java.lang.Math.pow;
 
 /**
  *
- * @author ht3000711
+ * @author note
  */
-public class Quadrado{
+public class Cubo {
     
-    public float Area(float valorLado) {
-        return (float) pow(valorLado,2);   
+    public float Volume(float aresta){
+        return (float) pow(aresta, 3); 
+    } 
+    
+    public float Area(float aresta) {
+        return (float) pow((aresta*6), 2);   
     }
     
-    public float VPerimetro(float valorLado){
-        return valorLado*4;
-    }  
 }
