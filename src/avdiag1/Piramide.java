@@ -9,7 +9,7 @@ package avdiag1;
  *
  * @author note
  */
-public class Piramede {
+public class Piramide {
     
     public float Volume(float areaBase, float altura){
         
