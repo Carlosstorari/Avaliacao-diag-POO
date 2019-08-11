@@ -11,19 +11,47 @@ import static java.lang.Math.pow;
  *
  * @author note
  */
-public class Triangulo {
+public class Triangulo extends Forma2D {
+    private float base;
+    private float altura;
+    private float[] lados = new float[3];
     
-    
-    public float Area(float base, float altura) {
+    @Override
+    public float area() {
         return base * altura / 2;   
     }
     
-    public float VPerimetro(float[] lados){
+    @Override
+    public float perimetro(){
         float soma = 0;
         for(int i = 0; i< lados.length; i++){
             soma += lados[i];
         }
         return soma;
     }  
+
+    public float getBase() {
+        return base;
+    }
+
+    public void setBase(float base) {
+        this.base = base;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
+    public float[] getLados() {
+        return lados;
+    }
+
+    public void setLados(float[] lados) {
+        this.lados = lados;
+    }
     
 }

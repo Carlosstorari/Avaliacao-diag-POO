@@ -9,15 +9,35 @@ package avdiag1;
  *
  * @author note
  */
-public class Retangulo {
+public class Retangulo extends Forma2D {
+   private float base;
+   private float altura;
     
-    public float Area(float base, float altura) {
+    @Override
+    public float area() {
         return base * altura;   
     }
     
-    public float VPerimetro(float base, float altura){
+    @Override
+    public float perimetro(){
         
         return base*2 + altura*2;
+    }
+
+    public float getBase() {
+        return base;
+    }
+
+    public void setBase(float base) {
+        this.base = base;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
     }
     
 }

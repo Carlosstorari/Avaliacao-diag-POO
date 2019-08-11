@@ -18,16 +18,19 @@ public class AvDiag1 {
                 case 0:
                     Quadrado quadrado = new Quadrado();
                     lado = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor dos lados do "));
-                    area = quadrado.Area(lado);
-                    perimetro = quadrado.VPerimetro(lado);
+                    quadrado.setValorLado(lado);
+                    area = quadrado.area();
+                    perimetro = quadrado.perimetro();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
                     break;
                 case 1:
                     Retangulo retangulo = new Retangulo();
                     base = Float.parseFloat(JOptionPane.showInputDialog("Digite a base do retangulo"));
                     altura = Float.parseFloat(JOptionPane.showInputDialog("Digite a altura do retangulo"));
-                    perimetro = retangulo.VPerimetro(base, altura);
-                    area = retangulo.Area(base, altura);
+                    retangulo.setBase(base);
+                    retangulo.setAltura(altura);
+                    perimetro = retangulo.perimetro();
+                    area = retangulo.area();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
                     break;
                 case 2:
@@ -37,8 +40,11 @@ public class AvDiag1 {
                     }
                     base = Float.parseFloat(JOptionPane.showInputDialog("Digite a base do triangulo"));
                     altura = Float.parseFloat(JOptionPane.showInputDialog("Digite a altura do triangulo"));
-                    perimetro = triangulo.VPerimetro(ladosTriangulo);
-                    area = triangulo.Area(base, altura);
+                    triangulo.setBase(base);
+                    triangulo.setAltura(altura);
+                    triangulo.setLados(ladosTriangulo);
+                    perimetro = triangulo.perimetro();
+                    area = triangulo.area();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
                     break;
                 case 3:

@@ -11,13 +11,25 @@ import static java.lang.Math.pow;
  *
  * @author ht3000711
  */
-public class Quadrado{
-    
-    public float Area(float valorLado) {
+public class Quadrado extends Forma2D{
+    private float valorLado;
+    @Override
+    public float area() {
         return (float) pow(valorLado,2);   
     }
     
-    public float VPerimetro(float valorLado){
+    @Override
+    public float perimetro(){
         return valorLado*4;
-    }  
+    }
+
+    public float getValorLado() {
+        return valorLado;
+    }
+
+    public void setValorLado(float valorLado) {
+        this.valorLado = valorLado;
+    }
+    
+    
 }
