@@ -9,6 +9,7 @@ package avdiag1;
  *
  * @author note
  */
-public class Forma3D {
-    
+public abstract class Forma3D extends Forma  {
+    public abstract float volume();
+    private float aresta;
 }

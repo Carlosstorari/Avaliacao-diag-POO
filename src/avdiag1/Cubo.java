@@ -11,14 +11,19 @@ import static java.lang.Math.pow;
  *
  * @author note
  */
-public class Cubo {
-    
-    public float Volume(float aresta){
+public class Cubo extends Forma3D{
+    private float aresta;
+    @Override
+    public float volume() {
         return (float) pow(aresta, 3); 
-    } 
-    
-    public float Area(float aresta) {
-        return (float) pow((aresta*6), 2);   
+    }
+
+    public float getAresta() {
+        return aresta;
+    }
+
+    public void setAresta(float aresta) {
+        this.aresta = aresta;
     }
     
 }

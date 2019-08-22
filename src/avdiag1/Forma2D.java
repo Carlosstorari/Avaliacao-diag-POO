@@ -9,9 +9,9 @@ package avdiag1;
  *
  * @author note
  */
-public abstract class Forma2D {
+public abstract class Forma2D extends Forma {
     
-    public float area(){return 0;}
-    public float perimetro(){return 0;}
+    public abstract float area();
+    public abstract float perimetro();
     
 }

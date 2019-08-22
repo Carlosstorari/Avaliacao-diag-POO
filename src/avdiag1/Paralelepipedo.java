@@ -11,17 +11,25 @@ import static java.lang.Math.pow;
  *
  * @author note
  */
-public class Paralelepipedo {
+public class Paralelepipedo extends Forma3D{
+    private float[] aresta = new float[3];
+
+    public float[] getAresta() {
+        return aresta;
+    }
+
+    public void setAresta(float[] aresta) {
+        this.aresta = aresta;
+    }
     
-    public float Volume(float[] aresta){
+
+    @Override
+    public float volume() {
         float vol = 1;
         for(int i = 0; i < 3; i++){
             vol *= aresta[i];
         }
         return vol; 
-    } 
-    
-    public float Area(float[] aresta) {
-        return 2*(aresta[0]*aresta[1] + aresta[0]*aresta[2] + aresta[1]*aresta[2]);   
     }
+    
 }

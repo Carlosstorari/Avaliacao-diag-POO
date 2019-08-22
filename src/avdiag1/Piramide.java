@@ -9,16 +9,12 @@ package avdiag1;
  *
  * @author note
  */
-public class Piramide {
+public class Piramide extends Forma3D{
+    private float areaBase,altura;
     
-    public float Volume(float areaBase, float altura){
-        
+    @Override
+    public float volume() {
         return (float)(0.33 * areaBase * altura); 
-    }
-    
-    public float Area (float areaBase, float facesLaterais){
-        
-        return areaBase + facesLaterais*4;
     }
     
 }

@@ -7,6 +7,7 @@ public class AvDiag1 {
         int x = 0;
         float area, perimetro, volume, faceLateral;
         float base, altura, aresta, lado;
+        Forma[] forma = new Forma[2];//10
         float[] ladosTriangulo = new float[3];
         float[] arestas = new float[3];
         while(x != 6){
@@ -17,7 +18,7 @@ public class AvDiag1 {
             switch (x){
                 case 0:
                     Quadrado quadrado = new Quadrado();
-                    lado = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor dos lados do "));
+                    lado = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor dos lados do Quadrado"));
                     quadrado.setValorLado(lado);
                     area = quadrado.area();
                     perimetro = quadrado.perimetro();
@@ -50,8 +51,8 @@ public class AvDiag1 {
                 case 3:
                     Cubo cubo = new Cubo();
                     aresta = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor das arestas do cubo"));
-                    volume = cubo.Volume(aresta);
-                    area = cubo.Area(aresta);
+                    volume = cubo.volume(aresta);
+                    area = cubo.area(aresta);
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nVolume: "+volume);
                     break;
                 case 4:
@@ -59,8 +60,9 @@ public class AvDiag1 {
                     for(int i = 0; i < arestas.length; i++){
                         arestas[i] = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor da "+(i+1)+"° aresta "));
                     }
-                    area = paralelepipedo.Area(arestas);
-                    volume = paralelepipedo.Volume(arestas);
+                    paralelepipedo.setArea(arestas);
+                    area = paralelepipedo.area(arestas);
+                    volume = paralelepipedo.volume(arestas);
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nVolume: "+volume);
                     break;
                 case 5:
