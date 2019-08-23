@@ -1,5 +1,7 @@
 package avdiag1;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import javax.swing.JOptionPane;
 public class AvDiag1 {
     public static void main(String[] args) {
@@ -10,6 +12,7 @@ public class AvDiag1 {
         float area, perimetro, volume;
         float base, altura, aresta, lado;
         Forma[] formas = new Forma[10];//10
+            
         float[] ladosTriangulo = new float[3];
         float[] arestas = new float[3];
         while(x != 7){
@@ -82,6 +85,8 @@ public class AvDiag1 {
                     piramide.push(formas, piramide);
                     break;
                 case 6:
+                    List list = Arrays.asList(formas);
+                    Collections.sort(list);
                     JOptionPane.showMessageDialog(null, Arrays.toString(formas));
                     break;
                 default:

@@ -9,7 +9,7 @@ package avdiag1;
  *
  * @author note
  */
-public abstract class Forma {
+public class Forma implements Comparable {
     private String nome;
 
     public String getNome() {
@@ -28,5 +28,10 @@ public abstract class Forma {
             }
         }
         return formas;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }
