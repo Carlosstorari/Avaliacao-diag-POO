@@ -20,5 +20,13 @@ public abstract class Forma {
         this.nome = nome;
     }
     
-    
+    public Forma[] push(Forma formas[], Forma forma){
+        for(int i = 0; i < formas.length; i++){
+            if(formas[i] == null){
+                formas[i] = forma;
+                break;
+            }
+        }
+        return formas;
+    }
 }

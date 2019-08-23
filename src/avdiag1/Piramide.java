@@ -10,11 +10,27 @@ package avdiag1;
  * @author note
  */
 public class Piramide extends Forma3D{
-    private float areaBase,altura;
+    private float base,altura;
+
+    public float getBase() {
+        return base;
+    }
+
+    public void setBase(float base) {
+        this.base = base;
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
     
     @Override
     public float volume() {
-        return (float)(0.33 * areaBase * altura); 
+        return (float)(0.33 * base * altura); 
     }
     
 }
