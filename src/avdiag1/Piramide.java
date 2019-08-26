@@ -32,5 +32,7 @@ public class Piramide extends Forma3D{
     public float volume() {
         return (float)(0.33 * base * altura); 
     }
-    
+    public String toString() {
+        return " \n"+this.getNome()+"\nVolume: "+this.volume()+"\n";
+    }
 }

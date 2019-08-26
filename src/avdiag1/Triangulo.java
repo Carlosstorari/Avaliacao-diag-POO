@@ -53,5 +53,10 @@ public class Triangulo extends Forma2D {
     public void setLados(float[] lados) {
         this.lados = lados;
     }
+
+    @Override
+    public String toString() {
+        return " \n"+this.getNome()+"\nÁrea: "+this.area()+"\nPerimetro: "+this.perimetro()+"\n";
+    }
     
 }

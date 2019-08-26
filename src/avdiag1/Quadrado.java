@@ -30,6 +30,8 @@ public class Quadrado extends Forma2D{
     public void setValorLado(float valorLado) {
         this.valorLado = valorLado;
     }
-    
-    
+    @Override
+    public String toString() {
+        return " \n"+this.getNome()+"\nÁrea: "+this.area()+"\nPerimetro: "+this.perimetro()+"\n";
+    }
 }

@@ -1,5 +1,5 @@
 package avdiag1;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -7,12 +7,11 @@ public class AvDiag1 {
     public static void main(String[] args) {
         // Carlos HT3000711
         // Daniel HT3000745
-        // Wiliam #########
+        // Wiliam HT1720228
         int x = 0;
         float area, perimetro, volume;
         float base, altura, aresta, lado;
-        Forma[] formas = new Forma[10];//10
-            
+        List<Forma> forma = new ArrayList<Forma>();
         float[] ladosTriangulo = new float[3];
         float[] arestas = new float[3];
         while(x != 7){
@@ -28,7 +27,8 @@ public class AvDiag1 {
                     area = quadrado.area();
                     perimetro = quadrado.perimetro();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
-                    quadrado.push(formas, quadrado);
+                    quadrado.setNome("Quadrado");
+                    forma.add(quadrado);
                     break;
                 case 1:
                     Retangulo retangulo = new Retangulo();
@@ -39,7 +39,8 @@ public class AvDiag1 {
                     perimetro = retangulo.perimetro();
                     area = retangulo.area();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
-                    retangulo.push(formas, retangulo);
+                    retangulo.setNome("Retangulo");
+                    forma.add(retangulo);
                     break;
                 case 2:
                     Triangulo triangulo = new Triangulo();
@@ -54,7 +55,8 @@ public class AvDiag1 {
                     perimetro = triangulo.perimetro();
                     area = triangulo.area();
                     JOptionPane.showMessageDialog(null, "Área: "+area+"\nPerimetro: "+perimetro);
-                    triangulo.push(formas, triangulo);
+                    triangulo.setNome("Triangulo");
+                    forma.add(triangulo);
                     break;
                 case 3:
                     Cubo cubo = new Cubo();
@@ -62,7 +64,8 @@ public class AvDiag1 {
                     cubo.setAresta(aresta);
                     volume = cubo.volume();
                     JOptionPane.showMessageDialog(null, "Volume: "+volume);
-                    cubo.push(formas, cubo);
+                    cubo.setNome("Cubo");
+                    forma.add(cubo);
                     break;
                 case 4:
                     Paralelepipedo paralelepipedo = new Paralelepipedo();
@@ -72,7 +75,8 @@ public class AvDiag1 {
                     paralelepipedo.setAresta(arestas);
                     volume = paralelepipedo.volume();
                     JOptionPane.showMessageDialog(null, "Volume: "+volume);
-                    paralelepipedo.push(formas, paralelepipedo);
+                    paralelepipedo.setNome("Paralelepipedo");
+                    forma.add(paralelepipedo);
                     break;
                 case 5:
                     Piramide piramide = new Piramide();
@@ -82,12 +86,18 @@ public class AvDiag1 {
                     piramide.setAltura(altura);
                     volume = piramide.volume();
                     JOptionPane.showMessageDialog(null, "Volume: "+volume);
-                    piramide.push(formas, piramide);
+                    piramide.setNome("Piramide");
+                    forma.add(piramide);
                     break;
                 case 6:
-                    List list = Arrays.asList(formas);
-                    Collections.sort(list);
-                    JOptionPane.showMessageDialog(null, Arrays.toString(formas));
+                    Collections.sort(forma);
+                    //JOptionPane.showMessageDialog(null, forma);
+                    String output = "";
+                    for(int i = 0; i<forma.size(); i++){
+                        String everything = forma.get(i).toString();
+                        output += everything + "\n";       
+                    }
+                    JOptionPane.showMessageDialog(null, output);
                     break;
                 default:
                     System.exit(0);

@@ -26,4 +26,8 @@ public class Cubo extends Forma3D{
         this.aresta = aresta;
     }
     
+    @Override
+    public String toString() {
+        return " \n"+this.getNome()+"\nVolume: "+this.volume()+"\n";
+    }
 }

@@ -9,7 +9,7 @@ package avdiag1;
  *
  * @author note
  */
-public class Forma implements Comparable {
+public abstract class Forma implements Comparable<Forma>{
     private String nome;
 
     public String getNome() {
@@ -19,19 +19,15 @@ public class Forma implements Comparable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
-    public Forma[] push(Forma formas[], Forma forma){
-        for(int i = 0; i < formas.length; i++){
-            if(formas[i] == null){
-                formas[i] = forma;
-                break;
-            }
+    public abstract String toString();
+    @Override
+    public int compareTo(Forma f) {
+        if (this.nome.compareToIgnoreCase(f.getNome()) < 0) { 
+            return -1;
+        } if (this.nome.compareToIgnoreCase(f.getNome()) > 0) { 
+            return 1; 
         }
-        return formas;
+        return 0; 
     }
 
-    @Override
-    public int compareTo(Object o) {
-        return 0;
-    }
 }

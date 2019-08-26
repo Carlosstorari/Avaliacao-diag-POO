@@ -20,5 +20,7 @@ public class Paralelepipedo extends Forma3D{
         }
         return vol; 
     }
-    
+    public String toString() {
+        return " \n"+this.getNome()+"\nVolume: "+this.volume()+"\n";
+    }
 }
